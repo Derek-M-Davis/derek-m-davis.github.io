@@ -4,26 +4,23 @@
 
 
 $(() => {
-  // Grabbing About the Game button
-const $openBtn = $('#openModal');
+    const $openBtn = $('#openModal')
 
-// Grabbing modal element
-const $modal = $('#modal');
-
-// Grabbing close button
-const $closeBtn = $('#close');
-
-$openBtn.on('click', openModal);
-$closeBtn.on('click', closeModal);
-
-const openModal = () => {
-  $modal.css('display', 'block');
-}
-
-const closeModal = () => {
-  $modal.css('display', 'none');
-}
-
+    const $modal = $('#modal')
+  
+    const $closeBtn = $('#close')
+  
+    const openModal = () => {
+      $modal.css('display', 'block')
+    }
+  
+    $openBtn.on('click', openModal)
+  
+    const closeModal = () => {
+      $modal.css('display', 'none')
+    }
+  
+    $closeBtn.on('click', closeModal)
 
 
 

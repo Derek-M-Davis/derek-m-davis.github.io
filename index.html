@@ -13,28 +13,58 @@
     <h1>Learn more about your favorite movie</h1>
         <form>
                 <input type="text" placeholder="Movie Title"/>
-                <input type="submit" value="Get Movie Info"/>
+                <input type="submit" id='openModal' value="About The Movie"/>
                 <!-- <input type="submit" value="Feeling Lucky?"/> -->
                 
         </form>
-        <button id='openModal'>About the movie</button>
+   
     <div id="modal">
         <div id="modal-textbox">
-          <a id="close" href="#">Close</a>
+          <!-- <a id="close" href="#">Close</a> -->
           <h1>Media Details</h1>
-            <p>test area</p>        
+          <dl>
+            <dt>Title:</dt>
+            <dd id="title"></dd>
+            
+            <dt>Release Date:</dt>
+            <dd id="releaseDate"></dd>
+            <!-- <dt>Year</dt>
+            <dd id="year"></dd> -->
+    
+            <dt>Rated:</dt>
+            <dd id="rated"></dd>
+    
+            <dt>Poster:</dt>
+            <img id="poster"></img>
+    
+            <dt>Plot:</dt>
+            <dd id="plot"></dd>
+    
+            <dt>Actors:</dt>
+            <dd id="actors"></dd>
+    
+            <dt>Awards:</dt>
+            <dd id="awards"></dd>
+    
+            <dt>Box Office Earnings:</dt>
+            <dd id="boxOffice"></dd>
+        </dl>
+            <button id="close" class="modal-buttons">Close</button>     
         </div>
-    </div>
+    </div> 
+</body>
+</html>
+ 
 
-    <dl>
+    <!-- <dl>
         <dt>Title:</dt>
         <dd id="title"></dd>
         
         <dt>Release Date:</dt>
         <dd id="releaseDate"></dd>
-        <!-- <dt>Year</dt>
+        <dt>Year</dt>
         <dd id="year"></dd> -->
-
+<!-- 
         <dt>Rated:</dt>
         <dd id="rated"></dd>
 
@@ -52,9 +82,5 @@
 
         <dt>Box Office Earnings:</dt>
         <dd id="boxOffice"></dd>
-    </dl>
-    
-    
-</body>
-</html>
- 
+    </dl> --> -->
+<!-- <button type="submit" id='openModal' class="modal-buttons">About the movie</button> -->
