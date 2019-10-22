@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="app.js" charset="utf-8"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>    <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Beer Tasting by YOU</title>
-    <script>
-       function getData()
-        {
-            axios({
-  url: "https://api-v3.igdb.com/games",
-  method: 'POST',
-headers: {
-      'Accept': 'application/json',
-      'user-key': 'e9e6341303be555f38f64c89b5928eaf',
-  },
-  data: "fields age_ratings,aggregated_rating,aggregated_rating_count,alternative_names,artworks,bundles,category,collection,cover,created_at,dlcs,expansions,external_games,first_release_date,follows,franchise,franchises,game_engines,game_modes,genres,hypes,involved_companies,keywords,multiplayer_modes,name,parent_game,platforms,player_perspectives,popularity,pulse_count,rating,rating_count,release_dates,screenshots,similar_games,slug,standalone_expansions,status,storyline,summary,tags,themes,time_to_beat,total_rating,total_rating_count,updated_at,url,version_parent,version_title,videos,websites;"
-})
-  .then(response => {
-      console.log(response.data);
-  })
-  .catch(err => {
-      console.error(err);
-  });
-        }
-    </script>
+    <title>So you want to watch a Movie?</title>
+
 </head>
 <body>
-    <h1>Video Games library</h1>
-    <h2>Craft Beer saves lives too. rip</h2>
-    <button type='button' onClick='getData()'> get dat Data </button>
+    <h1>Learn more about your favorite movie</h1>
+        <form>
+                <input type="text" placeholder="Movie Title"/>
+                <input type="submit" value="Get Movie Info"/>
+                <!-- <input type="submit" value="Feeling Lucky?"/> -->
+                
+        </form>
+        <button id='openModal'>About the movie</button>
+    <div id="modal">
+        <div id="modal-textbox">
+          <a id="close" href="#">Close</a>
+          <h1>Media Details</h1>
+            <p>test area</p>        
+        </div>
+    </div>
+
+    <dl>
+        <dt>Title:</dt>
+        <dd id="title"></dd>
+        
+        <dt>Release Date:</dt>
+        <dd id="releaseDate"></dd>
+        <!-- <dt>Year</dt>
+        <dd id="year"></dd> -->
+
+        <dt>Rated:</dt>
+        <dd id="rated"></dd>
+
+        <dt>Poster:</dt>
+        <img id="poster"></img>
+
+        <dt>Plot:</dt>
+        <dd id="plot"></dd>
+
+        <dt>Actors:</dt>
+        <dd id="actors"></dd>
+
+        <dt>Awards:</dt>
+        <dd id="awards"></dd>
+
+        <dt>Box Office Earnings:</dt>
+        <dd id="boxOffice"></dd>
+    </dl>
+    
+    
 </body>
 </html>
+ 

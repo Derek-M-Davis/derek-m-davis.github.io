@@ -1,43 +1,58 @@
-(() => {
-    
+// console.log($)
 
 
 
-    // var url = 'https://api-v3.igdb.com/achievements';
-    // var xhr = createCORSRequest('GET', url);
-    // xhr.send();
-//     $.ajax({
-//       url: 'https://api-v3.igdb.com/games/',
-//       Headers: {
-//         'Access-Control-Allow-Credential': true,
-//         'Accept': 'application/json',
-//           'user-key': 'e9e6341303be555f38f64c89b5928eaf',
-//       },
-//     //   data: "fields achievement_icon,category,created_at,description,external_id,game,language,locked_achievement_icon,name,owners,owners_percentage,rank,slug,tags,updated_at;"
-//     })
-//       .then(response => {
-//           console.log(response.data);
-//       })
-//       .catch(err => {
-//           console.error(err);
-//       });
-    
-axios({
-  url: "https://api-v3.igdb.com/games",
-  method: 'GET',
-  headers: {
-      'Accept': 'application/json',
-      'user-key': 'e9e6341303be555f38f64c89b5928eaf',
-  },
-//   data: "fields achievement_icon,category,created_at,description,external_id,game,language,locked_achievement_icon,name,owners,owners_percentage,rank,slug,tags,updated_at;"
+
+$(() => {
+  // Grabbing About the Game button
+const $openBtn = $('#openModal');
+
+// Grabbing modal element
+const $modal = $('#modal');
+
+// Grabbing close button
+const $closeBtn = $('#close');
+
+$openBtn.on('click', openModal);
+$closeBtn.on('click', closeModal);
+
+const openModal = () => {
+  $modal.css('display', 'block');
+}
+
+const closeModal = () => {
+  $modal.css('display', 'none');
+}
+
+
+
+
+  $('form').on('submit', (event) => {
+    event.preventDefault()
+
+  const userInput = $('input[type="text"]'). val()
+
+  $.ajax({
+    url: "http://www.omdbapi.com/?apikey=c6a3e6b0&t=" + userInput,
+  }).then(
+    (data) => {
+      $('#title').html(data.Title)
+      $('#year').html(data.Year)
+      $('#rated').html(data.Rated)
+      $('#poster').attr('src', data.Poster)
+      $('#releaseDate').html(data.Released)
+      $('#awards').html(data.Awards)
+      $('#boxOffice').html(data.BoxOffice)
+      $('#plot').html(data.Plot)
+      $('#actors').html(data.Actors)
+
+
+      console.log(data)
+    },
+    (error) => {
+      console.log(error)
+    }
+  )
+    $('form').trigger('reset');
 })
-  .then(response => {
-      console.log(response.data);
-  })
-  .catch(err => {
-      console.error(err);
-  });
-
-
-
 })
