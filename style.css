@@ -41,6 +41,7 @@ h1 {
     padding: 15px;
     color: aquamarine;
 	background-color: rgb(142, 149, 149);
+	border-radius: 5px;
 }
 
 .modal-buttons {
