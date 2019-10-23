@@ -1,3 +1,5 @@
+/*  */reffered to the making a modal excerise alot due to inexperience and i kept breaking it
+
 body {
     background-image: url("images/background.jpg") ;
     background-repeat: no-repeat;
@@ -48,7 +50,7 @@ h1 {
 	outline: none;
 	border-radius: 15px;
 	color: white;
-	font-family: 'Arial';
+	font-family: 'Righteous', cursive;
 	cursor: pointer;
 }
 
