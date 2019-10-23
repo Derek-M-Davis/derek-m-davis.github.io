@@ -25,7 +25,7 @@ $(() => {
     const userInput = $('input[type="text"]'). val()
 
     $.ajax({
-      url: "http://www.omdbapi.com/?apikey=c6a3e6b0&t=" + userInput,
+      url: "https://www.omdbapi.com/?apikey=c6a3e6b0&t=" + userInput,
     }).then(
       (data) => {
         $('#title').html(data.Title)
