@@ -1,5 +1,6 @@
 # derek-m-davis.github.io
 General Assembly Project 1: Movie Details
+*Basic movie search my name using the OMDB API*
 
 **Explanations of the technologies used,** 
 HTML 5
