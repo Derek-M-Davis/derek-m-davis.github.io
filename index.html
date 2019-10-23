@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    src="http://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>    <script src="app.js" charset="utf-8"></script>
+    crossorigin="anonymous"></script>    
+    <script src="app.js" charset="utf-8"></script>
     <link rel="stylesheet" href="style.css">
     <title>So you want to watch a Movie?</title>
 
@@ -12,75 +13,41 @@
 <body>
     <h1>Learn more about your favorite movie</h1>
         <form>
-                <input type="text" placeholder="Movie Title"/>
-                <input type="submit" id='openModal' value="About The Movie"/>
-                <!-- <input type="submit" value="Feeling Lucky?"/> -->
-                
+            <input type="text" placeholder="Movie Title"/>
+            <input type="submit" id='openModal' value="About The Movie"/>
+            <!-- <input type="submit" value="Feeling Lucky?"/> -->
         </form>
    
     <div id="modal">
         <div id="modal-textbox">
-          <!-- <a id="close" href="#">Close</a> -->
           <h1>Media Details</h1>
-          <dl>
-            <dt>Title:</dt>
-            <dd id="title"></dd>
-            
-            <dt>Release Date:</dt>
-            <dd id="releaseDate"></dd>
-            <!-- <dt>Year</dt>
-            <dd id="year"></dd> -->
-    
-            <dt>Rated:</dt>
-            <dd id="rated"></dd>
-    
-            <dt>Poster:</dt>
-            <img id="poster"></img>
-    
-            <dt>Plot:</dt>
-            <dd id="plot"></dd>
-    
-            <dt>Actors:</dt>
-            <dd id="actors"></dd>
-    
-            <dt>Awards:</dt>
-            <dd id="awards"></dd>
-    
-            <dt>Box Office Earnings:</dt>
-            <dd id="boxOffice"></dd>
-        </dl>
+            <dl>
+                <dt>Title:</dt>
+                <dd id="title"></dd>
+                
+                <dt>Release Date:</dt>
+                <dd id="releaseDate"></dd>
+        
+                <dt>Rated:</dt>
+                <dd id="rated"></dd>
+        
+                <dt>Poster:</dt>
+                <img id="poster"></img>
+        
+                <dt>Plot:</dt>
+                <dd id="plot"></dd>
+        
+                <dt>Actors:</dt>
+                <dd id="actors"></dd>
+        
+                <dt>Awards:</dt>
+                <dd id="awards"></dd>
+        
+                <dt>Box Office Earnings:</dt>
+                <dd id="boxOffice"></dd>
+            </dl>
             <button id="close" class="modal-buttons">Close</button>     
         </div>
     </div> 
 </body>
 </html>
- 
-
-    <!-- <dl>
-        <dt>Title:</dt>
-        <dd id="title"></dd>
-        
-        <dt>Release Date:</dt>
-        <dd id="releaseDate"></dd>
-        <dt>Year</dt>
-        <dd id="year"></dd> -->
-<!-- 
-        <dt>Rated:</dt>
-        <dd id="rated"></dd>
-
-        <dt>Poster:</dt>
-        <img id="poster"></img>
-
-        <dt>Plot:</dt>
-        <dd id="plot"></dd>
-
-        <dt>Actors:</dt>
-        <dd id="actors"></dd>
-
-        <dt>Awards:</dt>
-        <dd id="awards"></dd>
-
-        <dt>Box Office Earnings:</dt>
-        <dd id="boxOffice"></dd>
-    </dl> --> -->
-<!-- <button type="submit" id='openModal' class="modal-buttons">About the movie</button> -->
