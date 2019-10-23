@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -11,13 +12,14 @@
 
 </head>
 <body>
+    <!-- Header, text box and input buttons -->
     <h1>Learn more about your favorite movie</h1>
         <form>
             <input type="text" placeholder="Movie Title"/>
             <input type="submit" id='openModal' value="About The Movie"/>
-            <!-- <input type="submit" value="Feeling Lucky?"/> -->
         </form>
-   
+        <button type="button" id='openModal'>Feeling Lucky?</button>
+<!-- Modal  -->
     <div id="modal">
         <div id="modal-textbox">
           <h1>Media Details</h1>
